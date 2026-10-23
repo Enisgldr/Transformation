@@ -1,280 +1,211 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Fitness Transformation Program</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sana Bir Sorum Var 💗</title>
+
 <style>
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#0b1220;
-  color:#fff;
-  line-height:1.6;
+* {
+    box-sizing: border-box;
 }
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:20px;
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #fff0f5, #ffe0eb);
 }
-h1,h2,h3{
-  color:#38bdf8;
+
+.heart {
+    position: absolute;
+    color: #f3a1bd;
+    opacity: 0.6;
+    animation: float 6s infinite ease-in-out;
+    pointer-events: none;
 }
-.card{
-  background:#111a2e;
-  padding:20px;
-  border-radius:16px;
-  margin-bottom:20px;
-  box-shadow:0 0 15px rgba(0,0,0,0.3);
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-25px) rotate(12deg); }
 }
-.section-title{
-  border-left:4px solid #38bdf8;
-  padding-left:10px;
-  margin-top:10px;
+
+.card {
+    width: 90%;
+    max-width: 390px;
+    padding: 38px 22px;
+    text-align: center;
+    background: rgba(255,255,255,0.85);
+    border: 1px solid #ffd0df;
+    border-radius: 28px;
+    box-shadow: 0 12px 40px rgba(220, 100, 145, 0.15);
+    z-index: 2;
 }
-ul{
-  padding-left:20px;
+
+.emoji {
+    font-size: 55px;
+    margin-bottom: 12px;
 }
-li{
-  margin-bottom:6px;
+
+h1 {
+    color: #cf5c89;
+    font-size: 27px;
+    margin: 10px 0;
 }
-.highlight{
-  color:#22c55e;
-  font-weight:bold;
+
+p {
+    color: #986779;
+    font-size: 16px;
+    margin-bottom: 30px;
 }
-.warning{
-  color:#facc15;
-  font-weight:bold;
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    min-height: 65px;
 }
+
+button {
+    border: none;
+    border-radius: 14px;
+    padding: 13px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+#yes {
+    background: #e879a4;
+    color: white;
+    box-shadow: 0 5px 15px #e879a444;
+}
+
+#no {
+    background: #f7e5ec;
+    color: #a45d78;
+}
+
+#success {
+    display: none;
+    color: #cf5c89;
+    font-size: 23px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
 </style>
 </head>
+
 <body>
-<div class="container">
 
-<h1>🔥 TRANSFORMATION FITNESS PROGRAM 🔥</h1>
-
-<div class="card">
-<h2>📌 BESLENME PROGRAMI (KİLO + KAS)</h2>
-
-<h3 class="section-title">Günlük Hedef</h3>
-<ul>
-<li>Kalori: ~2800–3000</li>
-<li>Protein: 130–150g</li>
-<li>Su: 3 litre</li>
-<li>Uyku: 8 saat</li>
-</ul>
-
-<h3 class="section-title">SABAH</h3>
-<ul>
-<li>4 yumurta</li>
-<li>100g yulaf</li>
-<li>1 muz</li>
-<li>1 yemek kaşığı fıstık ezmesi</li>
-<li>1 bardak süt</li>
-</ul>
-
-<h3 class="section-title">ARA ÖĞÜN</h3>
-<ul>
-<li>Karışık kuruyemiş</li>
-<li>Ayran veya kefir</li>
-<li>1 meyve</li>
-</ul>
-
-<h3 class="section-title">ÖĞLE</h3>
-<ul>
-<li>150–200g tavuk / pirinç</li>
-<li>Bol pilav veya makarna</li>
-<li>Yoğurt</li>
-<li>Salata</li>
-</ul>
-
-<h3 class="section-title">ANTRENMAN ÖNCESİ</h3>
-<ul>
-<li>Muz</li>
-<li>Kahve (isteğe bağlı)</li>
-</ul>
-
-<h3 class="section-title">ANTRENMAN SONRASI</h3>
-<ul>
-<li>Süt + muz</li>
-<li>2 yumurta veya tavuk</li>
-</ul>
-
-<h3 class="section-title">AKŞAM</h3>
-<ul>
-<li>Kırmızı et / tavuk / ton balığı</li>
-<li>Pirinç veya patates</li>
-<li>Yoğurt</li>
-</ul>
-
-<h3 class="section-title">GECE</h3>
-<ul>
-<li>Lor peyniri veya süt</li>
-<li>Bir avuç badem</li>
-</ul>
-
-<p class="warning">📌 KİLO ALMAK İÇİN EN ÖNEMLİ ŞEY</p>
-<ul>
-<li>Her hafta tartıl</li>
-<li>2 hafta kilo artmazsa → +300 kalori ekle</li>
-<li>Çok yağlanırsan → azalt</li>
-</ul>
-
-<p class="highlight">🎯 Hedef: Haftada 0.3 – 0.5 kg</p>
-</div>
+<div class="heart" style="top:10%;left:12%;font-size:28px;">♡</div>
+<div class="heart" style="top:20%;right:12%;font-size:35px;">♥</div>
+<div class="heart" style="bottom:15%;left:15%;font-size:30px;">♡</div>
+<div class="heart" style="bottom:12%;right:15%;font-size:25px;">♥</div>
 
 <div class="card">
-<h2>🏋️ EVDE ANTRENMAN PROGRAMI</h2>
-<p>(2 adet 9 kg dumbbell ile)</p>
+    <div class="emoji" id="emoji">☕💗</div>
 
-<h3 class="section-title">PROGRAM SİSTEMİ</h3>
-<ul>
-<li>Pazartesi → Push</li>
-<li>Salı → Pull</li>
-<li>Çarşamba → Legs</li>
-<li>Perşembe → Dinlen</li>
-<li>Cuma → Upper</li>
-<li>Cumartesi → Full Body</li>
-<li>Pazar → Dinlen</li>
-</ul>
+    <h1 id="title">Sana bir sorum var...</h1>
+    <p id="question">Benimle kahve içelim mi? 🌸</p>
 
-<h3 class="section-title">PUSH GÜNÜ</h3>
-<ul>
-<li>Şınav — 4x maksimum</li>
-<li>Dumbbell Floor Press — 4x12</li>
-<li>Shoulder Press — 4x10</li>
-<li>Yana Açış — 4x15</li>
-<li>Diamond Push-up — 3x maksimum</li>
-</ul>
+    <div class="buttons" id="buttons">
+        <button id="yes" onclick="accept()">Evet 💗</button>
+        <button id="no" onclick="decline()">Hayır 🙈</button>
+    </div>
 
-<h3 class="section-title">PULL GÜNÜ</h3>
-<ul>
-<li>Dumbbell Row — 4x12</li>
-<li>Tek Kol Row — 4x10</li>
-<li>Dumbbell Curl — 4x12</li>
-<li>Hammer Curl — 3x12</li>
-<li>Reverse Fly — 3x15</li>
-</ul>
-
-<h3 class="section-title">LEG GÜNÜ</h3>
-<ul>
-<li>Goblet Squat — 5x15</li>
-<li>Bulgarian Split Squat — 4x10</li>
-<li>Romanian Deadlift — 4x12</li>
-<li>Jump Squat — 3x15</li>
-<li>Calf Raise — 5x20</li>
-</ul>
-
-<h3 class="section-title">UPPER DAY</h3>
-<ul>
-<li>Push-up — 4 set</li>
-<li>Row — 4x12</li>
-<li>Shoulder Press — 4x10</li>
-<li>Curl — 3x12</li>
-<li>Lateral Raise — 3x15</li>
-</ul>
-
-<h3 class="section-title">FULL BODY</h3>
-<ul>
-<li>Squat — 4x15</li>
-<li>Push-up — 4 set</li>
-<li>Row — 4x12</li>
-<li>Shoulder Press — 3x10</li>
-<li>Plank — 3x1 dk</li>
-</ul>
-
-<p class="warning">🔥 KAS YAPMANIN ALTIN KURALI</p>
-<ul>
-<li>Her hafta tekrar artır</li>
-<li>Set artır</li>
-<li>Daha kontrollü yap</li>
-</ul>
-
-<p class="highlight">Kas gelişimi = progressive overload</p>
+    <div id="success">
+        Yaşasııın! 💕🥹<br>
+        O zaman kahveler benden! ☕<br>
+        <span style="font-size:17px;">Güzel bir gün bizi bekliyor 💖</span>
+    </div>
 </div>
 
-<div class="card">
-<h2>🧍 UZUN GÖRÜNME & POSTÜR</h2>
-<p>Her gün 10 dk:</p>
-<ul>
-<li>Barfiks demirine asıl</li>
-<li>Cobra stretch</li>
-<li>Cat-cow stretch</li>
-<li>Hip flexor stretch</li>
-<li>Wall posture drill</li>
-</ul>
-<p class="highlight">Duruşun düzelir, daha uzun görünürsün</p>
-</div>
+<script>
+let yesSize = 16;
+let noSize = 16;
+let noCount = 0;
 
-<div class="card">
-<h2>💊 TAKVİYE</h2>
-<ul>
-<li>Kreatin monohidrat (5g)</li>
-<li>Whey protein (gerekirse)</li>
-</ul>
-<p>Başka hiçbir şeye gerek yok</p>
-</div>
+function decline() {
+    noCount++;
 
-<div class="card">
-<h2>🥤 SMOOTHIE REHBERİ</h2>
+    yesSize = Math.min(yesSize + 7, 65);
+    noSize = Math.max(noSize - 2, 7);
 
-<h3>💪 MASS GAINER SMOOTHIE (En önemlisi)</h3>
-<p>Yaklaşık: 700–900 kalori</p>
-<ul>
-<li>500 ml süt</li>
-<li>1 muz</li>
-<li>100g yulaf</li>
-<li>1 yemek kaşığı bal</li>
-<li>2 yemek kaşığı fıstık ezmesi</li>
-<li>1 ölçek whey (varsa)</li>
-<li>Birkaç buz</li>
-</ul>
-<p>➡ Blendere at</p>
-<p><b>Ne zaman?</b></p>
-<ul>
-<li>Antrenman sonrası</li>
-<li>Kahvaltıyla beraber</li>
-</ul>
+    const yes = document.getElementById("yes");
+    const no = document.getElementById("no");
 
-<h3>💰 EKONOMİK KİLO ALDIRAN SMOOTHIE</h3>
-<p>Yaklaşık: 500–700 kalori</p>
-<ul>
-<li>400 ml süt</li>
-<li>1 muz</li>
-<li>4 yemek kaşığı yulaf</li>
-<li>1 yemek kaşığı tahin</li>
-<li>Bal</li>
-</ul>
-<p>Hem ucuz hem etkili</p>
+    yes.style.fontSize = yesSize + "px";
+    yes.style.padding = (13 + noCount * 2) + "px " +
+                        (24 + noCount * 3) + "px";
 
-<h3>🥗 TEMİZ KAS SMOOTHIE</h3>
-<p>(Lean bulk için)</p>
-<ul>
-<li>Kefir</li>
-<li>Çilek / muz</li>
-<li>Yulaf</li>
-<li>Yoğurt</li>
-<li>Tarçın</li>
-</ul>
-<p>Sindirimi daha rahat</p>
+    no.style.fontSize = noSize + "px";
+    no.style.padding = Math.max(3, 13 - noCount) + "px " +
+                       Math.max(4, 24 - noCount * 2) + "px";
 
-<h3>⚡ EN İYİ KOMBİN</h3>
-<ul>
-<li>Sabah: Büyük kahvaltı</li>
-<li>Öğlen: Normal yemek</li>
-<li>Antrenman sonrası: Mass gainer smoothie</li>
-<li>Akşam: Büyük yemek</li>
-</ul>
-<p>Günlük kalori rahat tamamlanır</p>
+    const messages = [
+        "Emin misin? 🥺💗",
+        "Bir kahve sadece... ☕",
+        "Son kararın mı? 🥹",
+        "Evet desen ne güzel olurdu 💕",
+        "Hayır butonu küçülüyor 🙈"
+    ];
 
-<h3>⚠️ ÖNEMLİ DETAY</h3>
-<ul>
-<li>Hızlı içme</li>
-<li>10–15 dk yayarak iç</li>
-<li>Şişkinlik yapabilir</li>
-</ul>
-</div>
+    document.getElementById("question").textContent =
+        messages[(noCount - 1) % messages.length];
+}
 
-</div>
+function accept() {
+    document.getElementById("emoji").textContent = "🥹💖";
+    document.getElementById("title").textContent = "Gerçekten mi?!";
+    document.getElementById("question").style.display = "none";
+    document.getElementById("buttons").style.display = "none";
+    document.getElementById("success").style.display = "block";
+
+    // Konfeti efekti
+    const colors = ["#ff75a0", "#ffb6c9", "#ffd166",
+                    "#ffffff", "#e879a4", "#c8a2ff"];
+
+    for (let i = 0; i < 150; i++) {
+        const confetti = document.createElement("div");
+
+        confetti.style.position = "fixed";
+        confetti.style.left = Math.random() * 100 + "vw";
+        confetti.style.top = "-20px";
+        confetti.style.width = (Math.random() * 8 + 5) + "px";
+        confetti.style.height = (Math.random() * 8 + 5) + "px";
+        confetti.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.borderRadius = Math.random() > 0.5 ? "50%" : "2px";
+        confetti.style.zIndex = "10";
+        confetti.style.pointerEvents = "none";
+
+        document.body.appendChild(confetti);
+
+        const duration = Math.random() * 2500 + 2000;
+        const drift = (Math.random() - 0.5) * 300;
+
+        confetti.animate([
+            { transform: "translate(0, 0) rotate(0deg)", opacity: 1 },
+            { transform: `translate(${drift}px, 110vh) rotate(900deg)`,
+              opacity: 0.8 }
+        ], {
+            duration: duration,
+            easing: "ease-in",
+            fill: "forwards"
+        });
+
+        setTimeout(() => confetti.remove(), duration + 100);
+    }
+}
+</script>
+
 </body>
 </html>
